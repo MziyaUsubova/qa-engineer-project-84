@@ -1,18 +1,21 @@
 ---
-- summary: |
-    Проверка кнопки X в окне подтверждения заказа в мобильной версии сайта 
-    Пользователь может закрыть окно Chekout нажав на X
-  requirement: |
-    Нажать кнопку Chekout и затем нажать на X
-  prerequisites: |
-    Открыта главная страница 
-  test-data: |
-    Тестовые данные
-    Выбрать товар из каталога и добавить в корзину
-  steps:
-    - Добавить товар в корзину 
-    - Перейти по кнопке Cart в корзину
-    - Подтвердить заказ нажав Chekout
-    - Закрыть окно Chekout нажав на X
-  expected-result: |
-    Пользователь может закрыть окно Chekout нажав на X
+test-cases:
+  - summary: |
+      Проверка кнопки Х в окне Chekout
+    status: fail
+
+bugreports:
+  - summary: |
+      Кнопка Х в окне Chekout не работает
+    environment: |
+      Google Chrome Version 120.0.6099.129 (Official Build) (x86_64)
+      OS macOS Sonoma 14.2.1
+    steps-to-reproduce: |
+      Добавить товар в корзину 
+      Нажать кнопку Cart
+      Нажать кнопку Chekout
+      Нажать кнопку Х в окне Chekout
+    expected-result: |
+      Окно Chekout закрывается нажатием на X
+    actual-result: |
+      Кнопка Х в окне Chekout не работает

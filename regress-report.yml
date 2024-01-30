@@ -1,21 +1,274 @@
 ---
 test-cases:
   - summary: |
-      Проверка кнопки Х в окне Chekout
-    status: fail
+      Проверка поиска товара по названию бренда
+    status: pass
+
+---
+test-cases:
+  - summary: |
+      Проверка поиска товара по названию несуществующего бренда
+  status: fail
+bugreports:
+  - summary: |
+      При вводе несуществующего бренда система не реагирует
+  environment: |
+
+  steps-to-reproduce: |
+      Главная страница
+      В окне Search вводим название несуществующего бренда "IKEA"
+  expected-result: |
+      Вывод на экран сообщения Nothing found
+   actual-result: |
+      Система не реагирует
+
+---
+test-cases:
+  - summary: |
+      Проверка поиска товара по существующему ключевому слову на английском языке 
+  status: pass    
+
+---
+test-cases:
+  - summary: |
+      Проверка поиска товара по существующему ключевому слову на русском языке 
+  status: fail
+bugreports:
+  - summary: |
+      При поиске по ключевому слову на русском языке система не реагирует
+  environment: |
+  
+  steps-to-reproduce: |  
+      Главная страница
+      В окне Поиск вводим "Еда"
+  expected-result: |  
+      Вывод на экран всех товаров из категории "Eда"
+   actual-result: |
+      Система не реагирует
+    
+---
+test-cases:
+  - summary: |
+   Проверка поиска товара по несуществующему ключевому слову на английском языке 
+status: fail
 
 bugreports:
   - summary: |
-      Кнопка Х в окне Chekout не работает
-    environment: |
-      Google Chrome Version 120.0.6099.129 (Official Build) (x86_64)
-      OS macOS Sonoma 14.2.1
-    steps-to-reproduce: |
-      Добавить товар в корзину 
-      Нажать кнопку Cart
-      Нажать кнопку Chekout
-      Нажать кнопку Х в окне Chekout
-    expected-result: |
-      Окно Chekout закрывается нажатием на X
-    actual-result: |
-      Кнопка Х в окне Chekout не работает
+      При поиске по несуществующему слову на английском языке система не реагирует
+ environment: |  
+ 
+  steps-to-reproduce: |  
+      Главная страница
+      В окне Поиск вводим "Window"
+  expected-result: |  
+      Вывод на экран сообщения Nothing found
+  actual-result: |
+      Система не реагирует
+
+---
+test-cases:
+  - summary: |
+      Проверка поиска товара по несуществующему ключевому слову на русском языке   
+status: fail
+
+bugreports:
+  - summary: |
+      При поиске по несуществующему слову на русском языке система не реагирует
+ environment: |  
+ 
+  steps-to-reproduce: |  
+      Главная страница
+      В окне Поиск вводим "Окно"
+  expected-result: |  
+      Вывод на экран сообщения Nothing found
+  actual-result: |
+      Система не реагирует 
+
+---
+test-cases:
+  - summary: |
+      Проверка поиска товара по категории  
+  status: pass
+
+ ---
+test-cases:
+  - summary: |
+      Проверка поиска товара по категории  и ключевому слову на английском языке 
+  status: pass
+
+---
+test-cases:
+  - summary: |
+      Проверка поиска товара по категории  и ключевому слову на русском языке 
+  status: fail
+  
+bugreports:
+  - summary: |
+      Не работает поиск товара по категории  и ключевому слову на русском языке 
+environment: |
+
+steps-to-reproduce: |
+      Главная страница
+      В окне Поиск вводим "Макароны" категория - "groceries"
+expected-result: |
+      Вывод на экран "Elbow Macaroni"
+actual-result: |
+      Сортировка не работает, справа главная страница
+
+---
+test-cases:
+  - summary: |
+      Проверка регистрации нового пользователя
+ status: fail
+ 
+---
+test-cases:
+  - summary: |
+       Проверка работы сайта на русском языке
+  status: fail
+  
+bugreports:
+  - summary: |
+      Не переведен на русский язык: выпадающий список в "Категории", наименование и описание товаров, кнопка "Log in"
+environment: |
+  steps-to-reproduce: |
+     Главная страница
+     Language установить "Russian"
+  expected-result: |
+     Сайт полностью работает на русском языке
+  actual-result: |
+     Сайт частично работает на русском языке
+
+---
+test-cases:
+  - summary: | 
+      Проверка добавления товара Add to cart на главной странице
+  status: pass
+
+---
+test-cases:
+  - summary: |
+      Проверка работы флага в списке брендов товаров
+  status: pass    
+
+---
+test-cases:
+  - summary: |    
+      Добавление в корзину количества товара не превышающего количества в наличии
+  status: pass    
+
+---
+test-cases:
+  - summary: |
+      Проверка присваивания заказу номера
+  status: fail
+bugreports:
+  - summary: |
+      Заказу не присваивается номер после оформления
+  environment: |    
+
+  steps-to-reproduce: |
+     Главная страница
+     Добавить товар iPhone 9 в корзину 
+     Нажать "Cart"
+     Нажать Сheckout 
+ expected-result: |  
+     На экран выводится сообщение "Order placed successfully. Order number № 0001"
+ actual-result: |   
+     На экран выводится сообщение "Order placed successfully"
+
+---
+test-cases:
+  - summary: |
+      Проверка функционирования кнопки Продолжить покупки 
+  status: pass  
+
+---
+test-cases:
+  - summary: |
+      Проверка функционирования кнопки Очистить корзину  
+   status: pass  
+
+---
+test-cases:
+  - summary: |
+      Проверка функционирования кнопки Следующая 
+  status: pass     
+
+---
+test-cases:
+  - summary: |
+      Проверка функционирования кнопки Предыдущая
+  status: pass       
+
+---
+test-cases:
+  - summary: | 
+      Проверка сессии 
+  Проверка поиска товара с использованием сортировки по популярности
+
+bugreports:
+  - summary: |
+      После закрытия и открытия браузера товары не сохраняются в корзине
+  environment: |
+
+  steps-to-reproduce: |
+     - Добавить товар MacBook Pro в корзину
+     - Закрыть браузер 
+     - Открыть браузер
+  expected-result: |
+     После закрытия и открытия браузера товары должны сохраниться в корзине
+  actual-result: |
+     Корзина пустая
+
+---
+test-cases:
+  - summary: |              
+      Проверка поиска товара с использованием сортировки по популярности
+ status: fail
+
+ bugreports:
+    - summary: | 
+     Отсуствует сортировка по популярности
+   environment: |
+
+  steps-to-reproduce: |
+     Открыть главную страницу 
+     Пролистать вниз до Prise
+  expected-result: |
+     Ниже должно быть "Sort it out', в выпадающем списке "The most popular"
+  actual-result: |
+  Отсутствует строка "Sort it out'
+
+---
+test-cases:
+ - summary: | 
+Проверка функции "Поиск по изображению" 
+status: fail
+bugreports:
+    - summary: | 
+     Отсуствует сортировка по популярности
+   environment: |
+
+  steps-to-reproduce: |
+     Открыть главную страницу 
+     В поле Search должна быть иконка фотокамеры
+  expected-result: |
+     Иконка фотокамеры кликабельна
+  actual-result: |
+  Отсутствует В поле Search иконка фотокамеры
+
+---
+test-cases:
+ - summary: |
+      Проверка просмотра оформленных заказов в строке Оформленные заказы
+ status: fail
+bugreports:
+- summary: | 
+    После оформления заказа нет возможности просмотреть информацию об оформленном заказе
+steps-to-reproduce: |
+    Открыть главную страницу
+    Добавить товар в корзину
+    Оформить заказ
+    главная стрианица 
+    

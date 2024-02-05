@@ -132,3 +132,8 @@ status: fail
 - summary: |
     Проверка добавления товара в "Избранное"
 status: fail    
+
+---
+- summary: |
+    Проверка языковых флагов 
+status: fail    

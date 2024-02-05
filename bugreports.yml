@@ -2,7 +2,7 @@
 - summary: |
     Поиск товара по существующему ключевому слову на русском языке не работает 
   environment: |
-
+     Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
   steps-to-reproduce: |
     Главная страница 
     Ввести слово "Еда" в поле Поиск
@@ -25,137 +25,137 @@
     
 ---
 - summary: |
-   Сайт частично ппереводится на русский язык
-environment: |
-
-steps-to-reproduce: |
-      Главная страница
-      Language установить "Russian"
-    expected-result: |
-      Сайт полностью работает на русском языке
-    actual-result: |
-      Сайт частично работает на русском языке
-      Не переведены на русский язык выпадающий список в Категория, Описание товаров
-
----
-- summary: |
-      Заказу не присваивается номер после оформления
-    environment: |    
-
-    steps-to-reproduce: |
-      Главная страница
-      Добавить товар iPhone 9 в корзину 
-      Нажать "Cart"
-      Нажать Сheckout 
-    expected-result: |  
-      На экран выводится сообщение "Order placed successfully. Order number № 0001"
-    actual-result: |   
-      На экран выводится сообщение "Order placed successfully"
-
----
-- summary: |
-      После закрытия и открытия браузера товары не сохраняются в корзине
-    environment: |
-
-    steps-to-reproduce: |
-      - Добавить товар MacBook Pro в корзину
-      - Закрыть браузер 
-      - Открыть браузер
-    expected-result: |
-      После закрытия и открытия браузера товары должны сохраниться в корзине
-    actual-result: |
-      Корзина пустая
-
----
-- summary: | 
-      Отсуствует сортировка по популярности
-    environment: |
-
-    steps-to-reproduce: |
-      Открыть главную страницу 
-      Пролистать вниз до Prise
-    expected-result: |
-      Ниже должно быть "Sort it out', в выпадающем списке "The most popular"
-    actual-result: |
-      Отсутствует строка "Sort it out'
-
----
-- summary: | 
-      Отсуствует поиск по изображению
-    environment: |
-
-    steps-to-reproduce: |
-      Открыть главную страницу 
-      В поле Search должна быть иконка фотокамеры
-    expected-result: |
-      Иконка фотокамеры кликабельна
-    actual-result: |
-      Отсутствует В поле Search иконка фотокамеры
-
----
-- summary: | 
-      После оформления заказа нет возможности просмотреть информацию об оформленном заказе
-    environment: |
-    
-    steps-to-reproduce: |
-      Открыть главную страницу
-      Добавить товар в корзину
-      Оформить заказ
-      Главная стрианица 
-    expected-result: |   
-      В личном кабинете есть строка Оформленные заказы 
-    actual-result: |    
-      Отсутствует
-
----
-- summary: | 
-      Нет возможности изменить личную информацию, отстуствует строка Изменить и Сохранить личную информацию
-
-    environment: |
-    steps-to-reproduce: |
-      Главная страница
-    expected-result: |
-      Иконка Личный кабинет
-      Кликая на иконку Личный кабинет можно Изменить и Сохранить личную информацию
-    actual-result: |
-      Отсутствует иконка Личный кабинет
-
----
-- summary: |
-      Оформленный заказ отменить нельзя
-    environment: |
-
-    steps-to-reproduce: |
-      - Главная страница
-      - Добавить товар в корзину 
-      - Оформить заказ
-   expected-result: |
-      Кнопка "Отменить заказ"
-    actual-result: |
-      Отсутствует кнопка "Отменить заказ"
-
----
-- summary: |
-      Отсутствует возможность добавления товара в "Избранное"
-    environment: |
-
-    steps-to-reproduce: |
-      Главная страница
-      Каталог товаров
-    expected-result: |
-      На фото каждого товара есть сердечко для добавления товара в "Избранное"
-    actual-result: |
-      Отсутствует сердечко
-
----
-- summary: |
-      Отсутствует флаг у языка Английский
-  environment: |   
-
+    Сайт частично переводится на русский язык
+  environment: |
+    Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
   steps-to-reproduce: |
-      Главная страница
-      Язык
+    Главная страница
+    Language установить "Russian"
   expected-result: |
-      Слева от Английский соответствующий флаг
+    Сайт полностью работает на русском языке
   actual-result: |
-      Слева от Английский отсутствует соответствующий флаг
+    Сайт частично работает на русском языке
+    Не переведены на русский язык выпадающий список в Категория, Описание товаров
+
+---
+- summary: |
+    Заказу не присваивается номер после оформления
+  environment: |    
+    Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+  steps-to-reproduce: |
+    Главная страница
+    Добавить товар iPhone 9 в корзину 
+    Нажать "Cart"
+    Нажать Сheckout 
+  expected-result: |  
+    На экран выводится сообщение "Order placed successfully. Order number № 0001"
+  actual-result: |   
+    На экран выводится сообщение "Order placed successfully"
+
+---
+- summary: |
+    После закрытия и открытия браузера товары не сохраняются в корзине
+  environment: |
+    Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+  steps-to-reproduce: |
+    - Добавить товар MacBook Pro в корзину
+    - Закрыть браузер 
+    - Открыть браузер
+  expected-result: |
+    После закрытия и открытия браузера товары должны сохраниться в корзине
+  actual-result: |
+    Корзина пустая
+
+---
+- summary: | 
+    Отсуствует сортировка по популярности
+  environment: |
+    Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+  steps-to-reproduce: |
+    Открыть главную страницу 
+    Пролистать вниз до Prise
+  expected-result: |
+    Ниже должно быть "Sort it out', в выпадающем списке "The most popular"
+  actual-result: |
+    Отсутствует строка "Sort it out'
+
+---
+- summary: | 
+    Отсуствует поиск по изображению
+  environment: |
+    Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+  steps-to-reproduce: |
+    Открыть главную страницу 
+    В поле Search должна быть иконка фотокамеры
+  expected-result: |
+      Иконка фотокамеры кликабельна
+  actual-result: |
+    Отсутствует В поле Search иконка фотокамеры
+
+---
+- summary: | 
+    После оформления заказа нет возможности просмотреть информацию об оформленном заказе
+  environment: |
+    Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36  
+  steps-to-reproduce: |
+    Открыть главную страницу
+    Добавить товар в корзину
+    Оформить заказ
+    Главная стрианица 
+  expected-result: |   
+    В личном кабинете есть строка Оформленные заказы 
+  actual-result: |    
+    Отсутствует
+
+---
+- summary: | 
+    Нет возможности изменить личную информацию, отстуствует строка Изменить и Сохранить личную информацию
+  environment: |
+    Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36 
+  steps-to-reproduce: |
+    Главная страница
+  expected-result: |
+    Иконка Личный кабинет
+    Кликая на иконку Личный кабинет можно Изменить и Сохранить личную информацию
+  actual-result: |
+    Отсутствует иконка Личный кабинет
+
+---
+- summary: |
+    Оформленный заказ отменить нельзя
+  environment: |
+    Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+  steps-to-reproduce: |
+    - Главная страница
+    - Добавить товар в корзину 
+    - Оформить заказ
+  expected-result: |
+    Кнопка "Отменить заказ"
+  actual-result: |
+    Отсутствует кнопка "Отменить заказ"
+
+---
+- summary: |
+    Отсутствует возможность добавления товара в "Избранное"
+  environment: |
+    Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+  steps-to-reproduce: |
+    Главная страница
+    Каталог товаров
+  expected-result: |
+    На фото каждого товара есть сердечко для добавления товара в "Избранное"
+  actual-result: |
+    Отсутствует сердечко
+
+---
+- summary: |
+    Отсутствует флаг у языка "Английский"
+  environment: |   
+    Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+  steps-to-reproduce: |
+    Главная страница
+    Язык
+  expected-result: |
+    Слева от "Английский" соответствующий флаг
+  actual-result: |
+    Слева от "Английский" отсутствует соответствующий флаг

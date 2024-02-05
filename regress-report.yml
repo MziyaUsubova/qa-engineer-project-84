@@ -12,7 +12,7 @@ bugreports:
   - summary: |
       При вводе несуществующего бренда система не реагирует
     environment: |
-
+      Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
     steps-to-reproduce: |
       Главная страница
       В окне Search вводим название несуществующего бренда "IKEA"
@@ -21,21 +21,18 @@ bugreports:
     actual-result: |
       Система не реагирует
 
-
-- summary: |
+  - summary: |
       Проверка поиска товара по существующему ключевому слову на английском языке 
     status: pass    
 
-
-- summary: |
-      Проверка поиска товара по существующему ключевому слову на русском языке 
+  - summary: |
+     Проверка поиска товара по существующему ключевому слову на русском языке 
     status: fail
 
-bugreports:
   - summary: |
       При поиске по ключевому слову на русском языке система не реагирует
     environment: |
-  
+      Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
     steps-to-reproduce: |  
       Главная страница
       В окне Поиск вводим "Еда"
@@ -44,16 +41,14 @@ bugreports:
     actual-result: |
       Система не реагирует
     
-
-- summary: |
+  - summary: |
       Проверка поиска товара по несуществующему ключевому слову на английском языке 
     status: fail
 
-bugreports:
   - summary: |
       При поиске по несуществующему слову на английском языке система не реагирует
     environment: |  
- 
+      Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
     steps-to-reproduce: |  
       Главная страница
       В окне Поиск вводим "Window"
@@ -62,16 +57,14 @@ bugreports:
     actual-result: |
       Система не реагирует
 
-
-- summary: |
+  - summary: |
       Проверка поиска товара по несуществующему ключевому слову на русском языке   
     status: fail
 
-bugreports:
   - summary: |
       При поиске по несуществующему слову на русском языке система не реагирует
     environment: |  
- 
+      Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
     steps-to-reproduce: |  
       Главная страница
       В окне Поиск вводим "Окно"
@@ -80,26 +73,22 @@ bugreports:
     actual-result: |
       Система не реагирует 
 
-
-- summary: |
+  - summary: |
       Проверка поиска товара по категории  
     status: pass
 
-
-- summary: |
+  - summary: |
       Проверка поиска товара по категории  и ключевому слову на английском языке 
     status: pass
 
-
-- summary: |
+  - summary: |
       Проверка поиска товара по категории  и ключевому слову на русском языке 
     status: fail
   
-bugreports:
   - summary: |
       Не работает поиск товара по категории  и ключевому слову на русском языке 
     environment: |
-
+      Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
     steps-to-reproduce: |
       Главная страница
       В окне Поиск вводим "Макароны" категория - "groceries"
@@ -108,21 +97,18 @@ bugreports:
     actual-result: |
       Сортировка не работает, справа главная страница
 
-
-- summary: |
+  - summary: |
      Проверка регистрации нового пользователя
     status: fail
  
-
-- summary: |
+  - summary: |
      Проверка работы сайта на русском языке
     status: fail
   
-bugreports:
   - summary: |
       Не переведен на русский язык: выпадающий список в "Категории", наименование и описание товаров, кнопка "Log in"
     environment: |
-    
+      Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
     steps-to-reproduce: |
       Главная страница
       Language установить "Russian"
@@ -131,31 +117,26 @@ bugreports:
     actual-result: |
       Сайт не полностью работает на русском языке
 
-
-- summary: | 
-     Проверка добавления товара Add to cart на главной странице
+  - summary: | 
+      Проверка добавления товара Add to cart на главной странице
     status: pass
 
-
-- summary: |
-     Проверка работы флага в списке брендов товаров
+  - summary: |
+      Проверка работы флага в списке брендов товаров
     status: pass    
 
-
-- summary: |    
-     Добавление в корзину количества товара не превышающего количества в наличии
+  - summary: |    
+      Добавление в корзину количества товара не превышающего количества в наличии
     status: pass    
 
-
-- summary: |
+  - summary: |
       Проверка присваивания заказу номера
     status: fail
 
-bugreports:
   - summary: |
       Заказу не присваивается номер после оформления
     environment: |    
-
+      Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
     steps-to-reproduce: |
       Главная страница
       Добавить товар iPhone 9 в корзину 
@@ -166,35 +147,30 @@ bugreports:
     actual-result: |   
       На экран выводится сообщение "Order placed successfully"
 
-
-- summary: |
+  - summary: |
       Проверка функционирования кнопки Продолжить покупки 
     status: pass  
 
-
-- summary: |
-     Проверка функционирования кнопки Очистить корзину  
+  - summary: |
+      Проверка функционирования кнопки Очистить корзину  
     status: pass  
 
-
-- summary: |
-     Проверка функционирования кнопки Следующая 
+  - summary: |
+      Проверка функционирования кнопки Следующая 
     status: pass     
 
-
-- summary: |
-     Проверка функционирования кнопки Предыдущая
+  - summary: |
+      Проверка функционирования кнопки Предыдущая
     status: pass       
 
+  - summary: | 
+      Проверка сессии 
+    status: fail
 
-- summary: | 
-     Проверка сессии 
-
-bugreports:
   - summary: |
       После закрытия и открытия браузера товары не сохраняются в корзине
     environment: |
-
+      Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
     steps-to-reproduce: |
       - Добавить товар MacBook Pro в корзину
       - Закрыть браузер 
@@ -204,16 +180,14 @@ bugreports:
     actual-result: |
       Корзина пустая
 
-
-- summary: |              
+  - summary: |              
       Проверка поиска товара с использованием сортировки по популярности
     status: fail
 
-bugreports:
   - summary: | 
       Отсуствует сортировка по популярности
     environment: |
-
+      Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
     steps-to-reproduce: |
       Открыть главную страницу 
       Пролистать вниз до Prise
@@ -222,16 +196,14 @@ bugreports:
     actual-result: |
       Отсутствует строка "Sort it out'
 
-
-- summary: | 
-     Проверка функции "Поиск по изображению" 
+  - summary: | 
+      Проверка функции "Поиск по изображению" 
     status: fail
 
-bugreports:
   - summary: | 
       Отсуствует сортировка по популярности
     environment: |
-
+      Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
     steps-to-reproduce: |
       Открыть главную страницу 
       В поле Search должна быть иконка фотокамеры
@@ -240,15 +212,14 @@ bugreports:
     actual-result: |
       Отсутствует В поле Search иконка фотокамеры
 
-
-- summary: |
-     Проверка просмотра оформленных заказов в строке Оформленные заказы
+  - summary: |
+      Проверка просмотра оформленных заказов в строке Оформленные заказы
     status: fail
-bugreports:
+
   - summary: | 
       После оформления заказа нет возможности просмотреть информацию об оформленном заказе
     environment: |
-    
+      Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
     steps-to-reproduce: |
       Открыть главную страницу
       Добавить товар в корзину
@@ -259,16 +230,14 @@ bugreports:
     actual-result: |    
       Отсутствует
 
-
-- summary: |
-     Проверка возможности изменить и сохранить личную информацию
+  - summary: |
+      Проверка возможности изменить и сохранить личную информацию
     status: fail
 
-bugreports:
   - summary: | 
       Нет возможности изменить личную информацию, отстуствует строка Изменить и Сохранить личную информацию
-
     environment: |
+      Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
     steps-to-reproduce: |
       Главная страница
     expected-result: |
@@ -276,16 +245,14 @@ bugreports:
     actual-result: |
       Отсутствует иконка Личный кабинет
 
-
-- summary: |
-     Проверка опции отмены заказа
+  - summary: |
+      Проверка опции отмены заказа
     status: fail
 
-bugreports:
   - summary: |
       Оформленный заказ отменить нельзя
     environment: |
-
+      Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
     steps-to-reproduce: |
       - Главная страница
       - Корзина 
@@ -294,16 +261,14 @@ bugreports:
     actual-result: |
       Отсутствует кнопка "Отменить заказ"
 
-
-- summary: |
+  - summary: |
       Проверка добавления товара в "Избранное"
     status: fail
     
-bugreports:
   - summary: |
       Отсутствует возможность добавления товара в "Избранное"
     environment: |
-
+      Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
     steps-to-reproduce: |
       Главная страница
       Каталог товаров
@@ -312,19 +277,18 @@ bugreports:
     actual-result: |
       Отсутствует сердечко
 
-
-- summary: |
+  - summary: |
       Проверка флагов у языков
     status: fail  
-bugreports:
+
   - summary: |
       Отсутствуют языковые флаги
     environment: |
+      Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
     steps-to-reproduce: |
       Главная страница
       Кликаем Language
     expected-result: |
       Слева от языка соответствующий флаг
-     actual-result: |
+    actual-result: |
       Отсутствуют флаги
-      

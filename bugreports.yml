@@ -1,43 +1,5 @@
 ---
 - summary: |
-      При вводе несуществующего бренда система не реагирует
-    environment: |
-
-    steps-to-reproduce: |
-      Главная страница
-      В окне Search вводим название несуществующего бренда "IKEA"
-    expected-result: |
-      Вывод на экран сообщения Nothing found
-    actual-result: |
-      Система не реагирует
-
----
-- summary: |
-      При поиске по несуществующему слову на английском языке система не реагирует
-    environment: |  
- 
-    steps-to-reproduce: |  
-      Главная страница
-      В окне Поиск вводим "Window"
-    expected-result: |  
-      Вывод на экран сообщения Nothing found
-    actual-result: |
-      Система не реагирует
-
- ---
- - summary: |
-      При поиске по несуществующему слову на русском языке система не реагирует
-    environment: |  
- 
-    steps-to-reproduce: |  
-      Главная страница
-      В окне Поиск вводим "Окно"
-    expected-result: |  
-      Вывод на экран сообщения Nothing found
-    actual-result: |
-      Система не реагирует 
----
-- summary: |
     Поиск товара по существующему ключевому слову на русском языке не работает 
   environment: |
 
@@ -119,7 +81,7 @@ steps-to-reproduce: |
 
 ---
 - summary: | 
-      Отсуствует сортировка по популярности
+      Отсуствует поиск по изображению
     environment: |
 
     steps-to-reproduce: |

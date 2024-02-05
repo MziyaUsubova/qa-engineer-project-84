@@ -4,8 +4,6 @@ test-cases:
       Проверка поиска товара по названию бренда
     status: pass
 
----
-test-cases:
   - summary: |
       Проверка поиска товара по названию несуществующего бренда
     status: fail
@@ -23,15 +21,13 @@ bugreports:
     actual-result: |
       Система не реагирует
 
----
-test-cases:
-  - summary: |
+
+- summary: |
       Проверка поиска товара по существующему ключевому слову на английском языке 
     status: pass    
 
----
-test-cases:
-  - summary: |
+
+- summary: |
       Проверка поиска товара по существующему ключевому слову на русском языке 
     status: fail
 
@@ -48,9 +44,8 @@ bugreports:
     actual-result: |
       Система не реагирует
     
----
-test-cases:
-  - summary: |
+
+- summary: |
       Проверка поиска товара по несуществующему ключевому слову на английском языке 
     status: fail
 
@@ -67,9 +62,8 @@ bugreports:
     actual-result: |
       Система не реагирует
 
----
-test-cases:
-  - summary: |
+
+- summary: |
       Проверка поиска товара по несуществующему ключевому слову на русском языке   
     status: fail
 
@@ -86,21 +80,18 @@ bugreports:
     actual-result: |
       Система не реагирует 
 
----
-test-cases:
-  - summary: |
+
+- summary: |
       Проверка поиска товара по категории  
     status: pass
 
----
-test-cases:
-  - summary: |
+
+- summary: |
       Проверка поиска товара по категории  и ключевому слову на английском языке 
     status: pass
 
----
-test-cases:
-  - summary: |
+
+- summary: |
       Проверка поиска товара по категории  и ключевому слову на русском языке 
     status: fail
   
@@ -117,15 +108,13 @@ bugreports:
     actual-result: |
       Сортировка не работает, справа главная страница
 
----
-test-cases:
-  - summary: |
+
+- summary: |
      Проверка регистрации нового пользователя
     status: fail
  
----
-test-cases:
-  - summary: |
+
+- summary: |
      Проверка работы сайта на русском языке
     status: fail
   
@@ -140,29 +129,25 @@ bugreports:
     expected-result: |
       Сайт полностью работает на русском языке
     actual-result: |
-      Сайт частично работает на русском языке
+      Сайт не полностью работает на русском языке
 
----
-test-cases:
-  - summary: | 
+
+- summary: | 
      Проверка добавления товара Add to cart на главной странице
     status: pass
 
----
-test-cases:
-  - summary: |
+
+- summary: |
      Проверка работы флага в списке брендов товаров
     status: pass    
 
----
-test-cases:
-  - summary: |    
+
+- summary: |    
      Добавление в корзину количества товара не превышающего количества в наличии
     status: pass    
 
----
-test-cases:
-  - summary: |
+
+- summary: |
       Проверка присваивания заказу номера
     status: fail
 
@@ -181,33 +166,28 @@ bugreports:
     actual-result: |   
       На экран выводится сообщение "Order placed successfully"
 
----
-test-cases:
-  - summary: |
+
+- summary: |
       Проверка функционирования кнопки Продолжить покупки 
     status: pass  
 
----
-test-cases:
-  - summary: |
+
+- summary: |
      Проверка функционирования кнопки Очистить корзину  
     status: pass  
 
----
-test-cases:
-  - summary: |
+
+- summary: |
      Проверка функционирования кнопки Следующая 
     status: pass     
 
----
-test-cases:
-  - summary: |
+
+- summary: |
      Проверка функционирования кнопки Предыдущая
     status: pass       
 
----
-test-cases:
-  - summary: | 
+
+- summary: | 
      Проверка сессии 
 
 bugreports:
@@ -224,9 +204,8 @@ bugreports:
     actual-result: |
       Корзина пустая
 
----
-test-cases:
-  - summary: |              
+
+- summary: |              
       Проверка поиска товара с использованием сортировки по популярности
     status: fail
 
@@ -243,9 +222,8 @@ bugreports:
     actual-result: |
       Отсутствует строка "Sort it out'
 
----
-test-cases:
-  - summary: | 
+
+- summary: | 
      Проверка функции "Поиск по изображению" 
     status: fail
 
@@ -262,9 +240,8 @@ bugreports:
     actual-result: |
       Отсутствует В поле Search иконка фотокамеры
 
----
-test-cases:
-  - summary: |
+
+- summary: |
      Проверка просмотра оформленных заказов в строке Оформленные заказы
     status: fail
 bugreports:
@@ -282,9 +259,8 @@ bugreports:
     actual-result: |    
       Отсутствует
 
----
-test-cases:
-  - summary: |
+
+- summary: |
      Проверка возможности изменить и сохранить личную информацию
     status: fail
 
@@ -300,9 +276,8 @@ bugreports:
     actual-result: |
       Отсутствует иконка Личный кабинет
 
----
-test-cases:
-  - summary: |
+
+- summary: |
      Проверка опции отмены заказа
     status: fail
 
@@ -319,9 +294,8 @@ bugreports:
     actual-result: |
       Отсутствует кнопка "Отменить заказ"
 
----
-test-cases:
-  - summary: |
+
+- summary: |
       Проверка добавления товара в "Избранное"
     status: fail
     
@@ -337,3 +311,20 @@ bugreports:
       На фото каждого товара есть сердечко для добавления товара в "Избранное"
     actual-result: |
       Отсутствует сердечко
+
+
+- summary: |
+      Проверка флагов у языков
+    status: fail  
+bugreports:
+  - summary: |
+      Отсутствуют языковые флаги
+    environment: |
+    steps-to-reproduce: |
+      Главная страница
+      Кликаем Language
+    expected-result: |
+      Слева от языка соответствующий флаг
+     actual-result: |
+      Отсутствуют флаги
+      

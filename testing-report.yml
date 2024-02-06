@@ -3,137 +3,110 @@
     Проверка поиска товара по названию бренда
   status: pass
 
----
 - summary: |
     Проверка поиска товара по названию бренда с несуществующим брендом
-status: pass
+  status: pass
 
----
 - summary: |
     Проверка поиска товара по существующему ключевому слову на английском языке 
-status: pass
+  status: pass
 
----
 - summary: |
     Проверка поиска товара по существующему ключевому слову на русском языке 
-status: fail
+  status: fail
 
----
 - summary: |
     Проверка поиска товара по несуществующему ключевому слову на английском языке 
-status: pass
+  status: pass
 
----
 - summary: |
     Проверка поиска товара по несуществующему ключевому слову на русском языке 
-status: pass    
+  status: pass    
 
----
 - summary: |
     Проверка поиска товара по категории
-status: pass
+  status: pass
 
----
 - summary: |
      Проверка поиска товара по категории  и ключевому слову на английском языке 
-status: pass
+  status: pass
 
----
 - summary: |
     Проверка поиска товара по категории  и ключевому слову на русском языке 
-status: fail
+  status: fail
 
----
 - summary: |
     Проверка регистрации нового пользователя
-status: fail
+  status: fail
 
----
 - summary: |
     Проверка работы сайта на русском языке
- status: fail
+  status: fail
 
----
 - summary: |
     Проверка добавления товара Add to cart на главной странице
-status: pass
+  status: pass
 
----
 - summary: |
     Проверка работы флага в списке брендов товаров
-status: pass
+  status: pass
 
----
 - summary: |
     Добавление в корзину количества товара не превышающего количества в наличии
-status: pass
+  status: pass
 
----
 - summary: |
      Проверка присваивания заказу номера
-status: fail
+  status: fail
 
----
 - summary: |
     Проверка функционирования кнопки Продолжить покупки
-status: pass
+  status: pass
 
----
 - summary: |
     Проверка функционирования кнопки Очистить корзину
- status: pass
-
----
+  status: pass
+  
 - summary: |
     Проверка функционирования кнопки Следующая
-status: pass
+  status: pass
 
----
 - summary: |
     Проверка функционирования кнопки Предыдущая
-status: pass
+  status: pass
 
----
 - summary: |
     Проверка сессии 
-status: fail
+  status: fail
 
----
 - summary: |
     Проверка поиска товара с использованием сортировки по популярности
-status: fail
+  status: fail
 
----
 - summary: |
     Проверка поиска товара с использованием фильтров по рейтингу
-status: fail
+  status: fail
 
----
 - summary: |
     Проверка функции "поиск по изображению" 
-status: fail
+  status: fail
 
----
 - summary: |
     Проверка просмотра оформленных заказов 
-status: fail
+  status: fail
 
----
 - summary: |
     Проверка возможности изменить и сохранить личную информацию
-status: fail
+  status: fail
 
----
 - summary: |
      Проверка опции отмены заказа
-status: fail
-
----
+  status: fail
+  
 - summary: |
     Проверка добавления товара в "Избранное"
-status: fail    
+  status: fail    
 
----
 - summary: |
     Проверка языковых флагов 
-status: fail    
+  status: fail 

@@ -1,6 +1,6 @@
 ---
 test-cases:
-- summary: |
+  - summary: |
       Проверка поиска товара по названию бренда
     status: pass
 
@@ -96,7 +96,6 @@ test-cases:
     actual-result: |
       Сортировка не работает, справа главная страница
 
- 
   - summary: |
      Проверка работы сайта на русском языке
     status: fail

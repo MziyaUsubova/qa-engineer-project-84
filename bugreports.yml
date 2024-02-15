@@ -10,20 +10,7 @@
     Из каталога выбраны товары категории "Еда" или содержащие в наименовании, описании "Еда"
   actual-result: | 
     выводится сообщение "Ничего не найдено!"
-
----
-- summary: |   
-    Проверка регистрации нового пользователя
-  environment: |
-    Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
-  steps-to-reproduce: |
-    Главная страница
-  expected-result: |
-    На главной странице иконка человечек, при наведении курсора предлагает зарегистрироваться
-  actual-result: | 
-    Отсуствует возможность зарегистрироваться
     
----
 - summary: |
     Сайт частично переводится на русский язык
   environment: |
@@ -37,7 +24,6 @@
     Сайт частично работает на русском языке
     Не переведены на русский язык выпадающий список в Категория, Описание товаров
 
----
 - summary: |
     Заказу не присваивается номер после оформления
   environment: |    
@@ -52,7 +38,6 @@
   actual-result: |   
     На экран выводится сообщение "Order placed successfully"
 
----
 - summary: |
     После закрытия и открытия браузера товары не сохраняются в корзине
   environment: |
@@ -66,33 +51,6 @@
   actual-result: |
     Корзина пустая
 
----
-- summary: | 
-    Отсуствует сортировка по популярности
-  environment: |
-    Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
-  steps-to-reproduce: |
-    Открыть главную страницу 
-    Пролистать вниз до Prise
-  expected-result: |
-    Ниже должно быть "Sort it out', в выпадающем списке "The most popular"
-  actual-result: |
-    Отсутствует строка "Sort it out'
-
----
-- summary: | 
-    Отсуствует поиск по изображению
-  environment: |
-    Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
-  steps-to-reproduce: |
-    Открыть главную страницу 
-    В поле Search должна быть иконка фотокамеры
-  expected-result: |
-      Иконка фотокамеры кликабельна
-  actual-result: |
-    Отсутствует В поле Search иконка фотокамеры
-
----
 - summary: | 
     После оформления заказа нет возможности просмотреть информацию об оформленном заказе
   environment: |
@@ -107,47 +65,6 @@
   actual-result: |    
     Отсутствует
 
----
-- summary: | 
-    Нет возможности изменить личную информацию, отстуствует строка Изменить и Сохранить личную информацию
-  environment: |
-    Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36 
-  steps-to-reproduce: |
-    Главная страница
-  expected-result: |
-    Иконка Личный кабинет
-    Кликая на иконку Личный кабинет можно Изменить и Сохранить личную информацию
-  actual-result: |
-    Отсутствует иконка Личный кабинет
-
----
-- summary: |
-    Оформленный заказ отменить нельзя
-  environment: |
-    Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
-  steps-to-reproduce: |
-    - Главная страница
-    - Добавить товар в корзину 
-    - Оформить заказ
-  expected-result: |
-    Кнопка "Отменить заказ"
-  actual-result: |
-    Отсутствует кнопка "Отменить заказ"
-
----
-- summary: |
-    Отсутствует возможность добавления товара в "Избранное"
-  environment: |
-    Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
-  steps-to-reproduce: |
-    Главная страница
-    Каталог товаров
-  expected-result: |
-    На фото каждого товара есть сердечко для добавления товара в "Избранное"
-  actual-result: |
-    Отсутствует сердечко
-
----
 - summary: |
     Отсутствует флаг у языка "Английский"
   environment: |   

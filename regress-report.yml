@@ -1,6 +1,6 @@
 ---
 test-cases:
-  - summary: |
+- summary: |
       Проверка поиска товара по названию бренда
     status: pass
 
@@ -8,7 +8,6 @@ test-cases:
       Проверка поиска товара по названию несуществующего бренда
     status: fail
 
-bugreports:
   - summary: |
       При вводе несуществующего бренда система не реагирует
     environment: |
@@ -97,9 +96,6 @@ bugreports:
     actual-result: |
       Сортировка не работает, справа главная страница
 
-  - summary: |
-     Проверка регистрации нового пользователя
-    status: fail
  
   - summary: |
      Проверка работы сайта на русском языке
@@ -180,38 +176,6 @@ bugreports:
     actual-result: |
       Корзина пустая
 
-  - summary: |              
-      Проверка поиска товара с использованием сортировки по популярности
-    status: fail
-
-  - summary: | 
-      Отсуствует сортировка по популярности
-    environment: |
-      Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
-    steps-to-reproduce: |
-      Открыть главную страницу 
-      Пролистать вниз до Prise
-    expected-result: |
-      Ниже должно быть "Sort it out', в выпадающем списке "The most popular"
-    actual-result: |
-      Отсутствует строка "Sort it out'
-
-  - summary: | 
-      Проверка функции "Поиск по изображению" 
-    status: fail
-
-  - summary: | 
-      Отсуствует сортировка по популярности
-    environment: |
-      Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
-    steps-to-reproduce: |
-      Открыть главную страницу 
-      В поле Search должна быть иконка фотокамеры
-    expected-result: |
-      Иконка фотокамеры кликабельна
-    actual-result: |
-      Отсутствует В поле Search иконка фотокамеры
-
   - summary: |
       Проверка просмотра оформленных заказов в строке Оформленные заказы
     status: fail
@@ -229,53 +193,6 @@ bugreports:
       В личном кабинете есть строка Оформленные заказы 
     actual-result: |    
       Отсутствует
-
-  - summary: |
-      Проверка возможности изменить и сохранить личную информацию
-    status: fail
-
-  - summary: | 
-      Нет возможности изменить личную информацию, отстуствует строка Изменить и Сохранить личную информацию
-    environment: |
-      Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
-    steps-to-reproduce: |
-      Главная страница
-    expected-result: |
-      Кликая на иконку Личный кабинет можно Изменить и Сохранить личную информацию
-    actual-result: |
-      Отсутствует иконка Личный кабинет
-
-  - summary: |
-      Проверка опции отмены заказа
-    status: fail
-
-  - summary: |
-      Оформленный заказ отменить нельзя
-    environment: |
-      Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
-    steps-to-reproduce: |
-      - Главная страница
-      - Корзина 
-    expected-result: |
-      Кнопка "Отменить заказ"
-    actual-result: |
-      Отсутствует кнопка "Отменить заказ"
-
-  - summary: |
-      Проверка добавления товара в "Избранное"
-    status: fail
-    
-  - summary: |
-      Отсутствует возможность добавления товара в "Избранное"
-    environment: |
-      Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
-    steps-to-reproduce: |
-      Главная страница
-      Каталог товаров
-    expected-result: |
-      На фото каждого товара есть сердечко для добавления товара в "Избранное"
-    actual-result: |
-      Отсутствует сердечко
 
   - summary: |
       Проверка флагов у языков

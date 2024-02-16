@@ -9,18 +9,6 @@ test-cases:
     status: fail
 
   - summary: |
-      При вводе несуществующего бренда система не реагирует
-    environment: |
-      Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
-    steps-to-reproduce: |
-      Главная страница
-      В окне Search вводим название несуществующего бренда "IKEA"
-    expected-result: |
-      Вывод на экран сообщения Nothing found
-    actual-result: |
-      Система не реагирует
-
-  - summary: |
       Проверка поиска товара по существующему ключевому слову на английском языке 
     status: pass    
 
@@ -29,48 +17,12 @@ test-cases:
     status: fail
 
   - summary: |
-      При поиске по ключевому слову на русском языке система не реагирует
-    environment: |
-      Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
-    steps-to-reproduce: |  
-      Главная страница
-      В окне Поиск вводим "Еда"
-    expected-result: |  
-      Вывод на экран всех товаров из категории "Eда"
-    actual-result: |
-      Система не реагирует
-    
-  - summary: |
       Проверка поиска товара по несуществующему ключевому слову на английском языке 
     status: fail
 
   - summary: |
-      При поиске по несуществующему слову на английском языке система не реагирует
-    environment: |  
-      Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
-    steps-to-reproduce: |  
-      Главная страница
-      В окне Поиск вводим "Window"
-    expected-result: |  
-      Вывод на экран сообщения Nothing found
-    actual-result: |
-      Система не реагирует
-
-  - summary: |
       Проверка поиска товара по несуществующему ключевому слову на русском языке   
     status: fail
-
-  - summary: |
-      При поиске по несуществующему слову на русском языке система не реагирует
-    environment: |  
-      Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
-    steps-to-reproduce: |  
-      Главная страница
-      В окне Поиск вводим "Окно"
-    expected-result: |  
-      Вывод на экран сообщения Nothing found
-    actual-result: |
-      Система не реагирует 
 
   - summary: |
       Проверка поиска товара по категории  
@@ -85,32 +37,8 @@ test-cases:
     status: fail
   
   - summary: |
-      Не работает поиск товара по категории  и ключевому слову на русском языке 
-    environment: |
-      Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
-    steps-to-reproduce: |
-      Главная страница
-      В окне Поиск вводим "Макароны" категория - "groceries"
-    expected-result: |
-      Вывод на экран "Elbow Macaroni"
-    actual-result: |
-      Сортировка не работает, справа главная страница
-
-  - summary: |
      Проверка работы сайта на русском языке
     status: fail
-  
-  - summary: |
-      Не переведен на русский язык: выпадающий список в "Категории", наименование и описание товаров, кнопка "Log in"
-    environment: |
-      Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
-    steps-to-reproduce: |
-      Главная страница
-      Language установить "Russian"
-    expected-result: |
-      Сайт полностью работает на русском языке
-    actual-result: |
-      Сайт не полностью работает на русском языке
 
   - summary: | 
       Проверка добавления товара Add to cart на главной странице
@@ -127,20 +55,6 @@ test-cases:
   - summary: |
       Проверка присваивания заказу номера
     status: fail
-
-  - summary: |
-      Заказу не присваивается номер после оформления
-    environment: |    
-      Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
-    steps-to-reproduce: |
-      Главная страница
-      Добавить товар iPhone 9 в корзину 
-      Нажать "Cart"
-      Нажать Сheckout 
-    expected-result: |  
-      На экран выводится сообщение "Order placed successfully. Order number № 0001"
-    actual-result: |   
-      На экран выводится сообщение "Order placed successfully"
 
   - summary: |
       Проверка функционирования кнопки Продолжить покупки 
@@ -163,6 +77,101 @@ test-cases:
     status: fail
 
   - summary: |
+      Проверка просмотра оформленных заказов в строке Оформленные заказы
+    status: fail
+
+  - summary: |
+      Проверка флагов у языков
+    status: fail  
+      
+bugreports:
+  - summary: |
+      При вводе несуществующего бренда система не реагирует
+    environment: |
+      Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+    steps-to-reproduce: |
+      Главная страница
+      В окне Search вводим название несуществующего бренда "IKEA"
+    expected-result: |
+      Вывод на экран сообщения Nothing found
+    actual-result: |
+      Система не реагирует
+  
+  - summary: |
+      При поиске по ключевому слову на русском языке система не реагирует
+    environment: |
+      Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+    steps-to-reproduce: |  
+      Главная страница
+      В окне Поиск вводим "Еда"
+    expected-result: |  
+      Вывод на экран всех товаров из категории "Eда"
+    actual-result: |
+      Система не реагирует
+  
+  - summary: |
+      При поиске по несуществующему слову на английском языке система не реагирует
+    environment: |  
+      Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+    steps-to-reproduce: |  
+      Главная страница
+      В окне Поиск вводим "Window"
+    expected-result: |  
+      Вывод на экран сообщения Nothing found
+    actual-result: |
+      Система не реагирует
+
+  - summary: |
+      При поиске по несуществующему слову на русском языке система не реагирует
+    environment: |  
+      Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+    steps-to-reproduce: |  
+      Главная страница
+      В окне Поиск вводим "Окно"
+    expected-result: |  
+      Вывод на экран сообщения Nothing found
+    actual-result: |
+      Система не реагирует 
+  
+  - summary: |
+      Не работает поиск товара по категории  и ключевому слову на русском языке 
+    environment: |
+      Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+    steps-to-reproduce: |
+      Главная страница
+      В окне Поиск вводим "Макароны" категория - "groceries"
+    expected-result: |
+      Вывод на экран "Elbow Macaroni"
+    actual-result: |
+      Сортировка не работает, справа главная страница
+      
+  - summary: |
+      Не переведен на русский язык: выпадающий список в "Категории", наименование и описание товаров, кнопка "Log in"
+    environment: |
+      Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+    steps-to-reproduce: |
+      Главная страница
+      Language установить "Russian"
+    expected-result: |
+      Сайт полностью работает на русском языке
+    actual-result: |
+      Сайт не полностью работает на русском языке
+
+  - summary: |
+      Заказу не присваивается номер после оформления
+    environment: |    
+      Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+    steps-to-reproduce: |
+      Главная страница
+      Добавить товар iPhone 9 в корзину 
+      Нажать "Cart"
+      Нажать Сheckout 
+    expected-result: |  
+      На экран выводится сообщение "Order placed successfully. Order number № 0001"
+    actual-result: |   
+      На экран выводится сообщение "Order placed successfully"
+
+  - summary: |
       После закрытия и открытия браузера товары не сохраняются в корзине
     environment: |
       Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
@@ -174,29 +183,7 @@ test-cases:
       После закрытия и открытия браузера товары должны сохраниться в корзине
     actual-result: |
       Корзина пустая
-
-  - summary: |
-      Проверка просмотра оформленных заказов в строке Оформленные заказы
-    status: fail
-
-  - summary: | 
-      После оформления заказа нет возможности просмотреть информацию об оформленном заказе
-    environment: |
-      Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
-    steps-to-reproduce: |
-      Открыть главную страницу
-      Добавить товар в корзину
-      Оформить заказ
-      Главная стрианица 
-    expected-result: |   
-      В личном кабинете есть строка Оформленные заказы 
-    actual-result: |    
-      Отсутствует
-
-  - summary: |
-      Проверка флагов у языков
-    status: fail  
-
+      
   - summary: |
       Отсутствуют языковые флаги
     environment: |

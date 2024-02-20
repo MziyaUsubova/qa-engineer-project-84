@@ -12,7 +12,7 @@
     выводится сообщение "Ничего не найдено!"
     
 - summary: |
-    Сайт частично переводится на русский язык
+    Интерфейс частично переводится на русский язык
   environment: |
     Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
   steps-to-reproduce: |
@@ -23,20 +23,6 @@
   actual-result: |
     Сайт частично работает на русском языке
     Не переведены на русский язык выпадающий список в Категория, Описание товаров
-
-- summary: |
-    Заказу не присваивается номер после оформления
-  environment: |    
-    Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
-  steps-to-reproduce: |
-    Главная страница
-    Добавить товар iPhone 9 в корзину 
-    Нажать "Cart"
-    Нажать Сheckout 
-  expected-result: |  
-    На экран выводится сообщение "Order placed successfully. Order number № 0001"
-  actual-result: |   
-    На экран выводится сообщение "Order placed successfully"
 
 - summary: |
     После закрытия и открытия браузера товары не сохраняются в корзине
@@ -51,28 +37,27 @@
   actual-result: |
     Корзина пустая
 
-- summary: | 
-    После оформления заказа нет возможности просмотреть информацию об оформленном заказе
-  environment: |
-    Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36  
-  steps-to-reproduce: |
-    Открыть главную страницу
-    Добавить товар в корзину
-    Оформить заказ
-    Главная стрианица 
-  expected-result: |   
-    В личном кабинете есть строка Оформленные заказы 
-  actual-result: |    
-    Отсутствует
-
 - summary: |
-    Отсутствует флаг у языка "Английский"
-  environment: |   
+    После оформления заказа закрытие модального окна иконкой в правом верхнем углу
+  environment: |
     Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
   steps-to-reproduce: |
-    Главная страница
-    Язык
+    - Добавить товар в корзину 
+    - Оформить заказ
+    - Нажать иконку закрытия в правом верхнем углу модального окна 
   expected-result: |
-    Слева от "Английский" соответствующий флаг
+    Модальное окно закрывается нажатием на иконку 
   actual-result: |
-    Слева от "Английский" отсутствует соответствующий флаг
+    Модальное окно не закрывается, иконка не кликабельна 
+
+- summary: |
+    Переход на главную страницу из корзины нажатием на логотип магазина 
+  environment: |
+    Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+  steps-to-reproduce: |
+    - Корзина 
+    - Нажать на логотип магазина
+  expected-result: |
+    Переход на главную страницу 
+  actual-result: |
+   Логотоп не кликабелен

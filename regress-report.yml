@@ -5,7 +5,7 @@ test-cases:
     status: pass
 
   - summary: |
-      Проверка поиска товара по названию несуществующего бренда
+      Проверка поиска товара по названию несуществующего бренда или наименованию товара
     status: fail
 
   - summary: |
@@ -14,14 +14,6 @@ test-cases:
 
   - summary: |
      Проверка поиска товара по существующему ключевому слову на русском языке 
-    status: fail
-
-  - summary: |
-      Проверка поиска товара по несуществующему ключевому слову на английском языке 
-    status: fail
-
-  - summary: |
-      Проверка поиска товара по несуществующему ключевому слову на русском языке   
     status: fail
 
   - summary: |
@@ -37,7 +29,7 @@ test-cases:
     status: fail
   
   - summary: |
-     Проверка работы сайта на русском языке
+     Проверка интерфейса на русском языке
     status: fail
 
   - summary: | 
@@ -51,10 +43,6 @@ test-cases:
   - summary: |    
       Добавление в корзину количества товара не превышающего количества в наличии
     status: pass    
-
-  - summary: |
-      Проверка присваивания заказу номера
-    status: fail
 
   - summary: |
       Проверка функционирования кнопки Продолжить покупки 
@@ -73,125 +61,38 @@ test-cases:
     status: pass       
 
   - summary: | 
-      Проверка сессии 
+      Проверка сохранения товаров в корзине после закрытия и открытия браузера
     status: fail
 
   - summary: |
-      Проверка просмотра оформленных заказов в строке Оформленные заказы
+      Проверка фильтрации товаров От
+    status: fail   
+  
+  - summary: |
+      Проверка фильтрации товаров по цене До
     status: fail
 
+bugreports:       
   - summary: |
-      Проверка флагов у языков
-    status: fail  
-      
-bugreports:
-  - summary: |
-      При вводе несуществующего бренда система не реагирует
+      Проверка фильтрации товаров по цене От
     environment: |
       Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
     steps-to-reproduce: |
-      Главная страница
-      В окне Search вводим название несуществующего бренда "IKEA"
+      - Главная страница 
+      - В окошке Цена От установить значение 
     expected-result: |
-      Вывод на экран сообщения Nothing found
+      Фильтрации товаров по цене От
     actual-result: |
-      Система не реагирует
-  
+      Товары не фильтруются по цене От
+        
   - summary: |
-      При поиске по ключевому слову на русском языке система не реагирует
-    environment: |
-      Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
-    steps-to-reproduce: |  
-      Главная страница
-      В окне Поиск вводим "Еда"
-    expected-result: |  
-      Вывод на экран всех товаров из категории "Eда"
-    actual-result: |
-      Система не реагирует
-  
-  - summary: |
-      При поиске по несуществующему слову на английском языке система не реагирует
-    environment: |  
-      Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
-    steps-to-reproduce: |  
-      Главная страница
-      В окне Поиск вводим "Window"
-    expected-result: |  
-      Вывод на экран сообщения Nothing found
-    actual-result: |
-      Система не реагирует
-
-  - summary: |
-      При поиске по несуществующему слову на русском языке система не реагирует
-    environment: |  
-      Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
-    steps-to-reproduce: |  
-      Главная страница
-      В окне Поиск вводим "Окно"
-    expected-result: |  
-      Вывод на экран сообщения Nothing found
-    actual-result: |
-      Система не реагирует 
-  
-  - summary: |
-      Не работает поиск товара по категории  и ключевому слову на русском языке 
+      Проверка фильтрации товаров по цене До
     environment: |
       Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
     steps-to-reproduce: |
-      Главная страница
-      В окне Поиск вводим "Макароны" категория - "groceries"
+      - Главная страница 
+      - В окошке Цена От установить значение 
     expected-result: |
-      Вывод на экран "Elbow Macaroni"
+      Фильтрации товаров по цене До
     actual-result: |
-      Сортировка не работает, справа главная страница
-      
-  - summary: |
-      Не переведен на русский язык: выпадающий список в "Категории", наименование и описание товаров, кнопка "Log in"
-    environment: |
-      Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
-    steps-to-reproduce: |
-      Главная страница
-      Language установить "Russian"
-    expected-result: |
-      Сайт полностью работает на русском языке
-    actual-result: |
-      Сайт не полностью работает на русском языке
-
-  - summary: |
-      Заказу не присваивается номер после оформления
-    environment: |    
-      Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
-    steps-to-reproduce: |
-      Главная страница
-      Добавить товар iPhone 9 в корзину 
-      Нажать "Cart"
-      Нажать Сheckout 
-    expected-result: |  
-      На экран выводится сообщение "Order placed successfully. Order number № 0001"
-    actual-result: |   
-      На экран выводится сообщение "Order placed successfully"
-
-  - summary: |
-      После закрытия и открытия браузера товары не сохраняются в корзине
-    environment: |
-      Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
-    steps-to-reproduce: |
-      - Добавить товар MacBook Pro в корзину
-      - Закрыть браузер 
-      - Открыть браузер
-    expected-result: |
-      После закрытия и открытия браузера товары должны сохраниться в корзине
-    actual-result: |
-      Корзина пустая
-      
-  - summary: |
-      Отсутствуют языковые флаги
-    environment: |
-      Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
-    steps-to-reproduce: |
-      Главная страница
-      Кликаем Language
-    expected-result: |
-      Слева от языка соответствующий флаг
-    actual-result: |
-      Отсутствуют флаги
+      Товары не фильтруются по цене До 

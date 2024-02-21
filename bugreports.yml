@@ -38,6 +38,18 @@
     Корзина пустая
 
 - summary: |
+    Фильтрация товаров с указанием цены в окошке От
+  environment: |
+    Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+  steps-to-reproduce: |
+    - Главная страница 
+    - Фильтрация по цене От
+  expected-result: |
+    Товары отфильтрованы по цене с с указанием цены в окошке От
+  actual-result: |
+    Фильтр не работает 
+    
+- summary: |
     После оформления заказа закрытие модального окна иконкой в правом верхнем углу
   environment: |
     Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36

@@ -104,6 +104,7 @@ bugreports:
       Показаны все товары бренда Samsung
     actual-result: |  
       Поиск не работает
+ 
   - summary: |
      Проверка фильтрации товаров по цене До
     environment: |

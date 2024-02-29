@@ -38,7 +38,7 @@
     Корзина пустая
 
 - summary: |
-    Фильтрация товаров с указанием цены в окошке От
+    Фильтрация товаров не работает при указании минимальной цены
   environment: |
     Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
   steps-to-reproduce: |
@@ -50,7 +50,7 @@
     Фильтр не работает 
     
 - summary: |
-    Закрытие модального окна иконкой крестик в правом верхнем углу после оформления заказа
+    Невозможно закрыть модальное окно через иконку крестик после оформления заказа
   environment: |
     Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
   steps-to-reproduce: |
@@ -63,7 +63,7 @@
     Модальное окно не закрывается, иконка крестик не кликабельна 
 
 - summary: |
-    Переход на главную страницу из корзины нажатием на логотип магазина 
+    Не работает переход на главную страницу нажатием на логотип магазина в корзине
   environment: |
     Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
   steps-to-reproduce: |
@@ -75,7 +75,7 @@
    Логотоп не кликабелен
 
 - summary: |
-    Проверка подтверждения заказа после оформления 
+    Отсутствует подтверждение заказа после его оформления 
   environment: |
     Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
   steps-to-reproduce: |

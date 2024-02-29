@@ -94,7 +94,7 @@ test-cases:
 
 bugreports:  
   - summary: |
-      Поиск товара по названию бренда 
+      Не работает поиск товара по названию бренда в поле Поиск
     environment: |
       Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
     steps-to-reproduce: |
@@ -106,7 +106,7 @@ bugreports:
       Поиск не работает
  
   - summary: |
-     Проверка фильтрации товаров по цене До
+     В Цена фильтр товаров по цене До не функционирует  
     environment: |
       Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
     steps-to-reproduce: |

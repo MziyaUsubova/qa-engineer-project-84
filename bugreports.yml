@@ -75,7 +75,7 @@
    Логотоп не кликабелен
 
 - summary: |
-    Отсутствует подтверждение заказа после его оформления 
+    При попытке офофрмить заказ получаем 500 ошибку от сервера
   environment: |
     Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
   steps-to-reproduce: |

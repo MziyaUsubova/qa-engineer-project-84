@@ -2,10 +2,10 @@
 - summary: |
     Поиск товара по существующему ключевому слову на русском языке не работает 
   environment: |
-     Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+    Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
   steps-to-reproduce: |
-    Главная страница 
-    Ввести слово "Еда" в поле Поиск
+    - Главная страница 
+    - Ввести слово "Еда" в поле Поиск
   expected-result: |
     Из каталога выбраны товары категории "Еда" или содержащие в наименовании, описании "Еда"
   actual-result: | 
@@ -16,8 +16,8 @@
   environment: |
     Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
   steps-to-reproduce: |
-    Главная страница
-    Language установить "Russian"
+    - Главная страница
+    - Language установить "Russian"
   expected-result: |
     Сайт полностью работает на русском языке
   actual-result: |
